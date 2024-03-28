@@ -1,0 +1,62 @@
+.magic {
+
+    background-size: cover;
+    background-position: center;
+    animation: magicBackground 10s infinite alternate ease-in-out;
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.magicTitle {
+
+    font-family: cursive, fantasy;
+    font-size: 3em;
+    color: #f0f;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 10px;
+
+
+    animation: magicTitleGlow 3s infinite alternate ease-in-out;
+}
+
+.magicP {
+    font-size: 40px;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+    /* Animation */
+    animation: magicPTextCrawl 5s infinite linear;
+}
+
+    /* Animations */
+    @keyframes magicBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0% 1000%; }
+}
+
+    @keyframes magicTitleGlow {
+    from { color: #f0f; }
+    to { color: #ff0; }
+}
+
+    @keyframes magicPTextCrawl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+.wil {
+    display: grid;
+    width: 1400px;
+    height: 400px;
+  }
+
+  .wil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

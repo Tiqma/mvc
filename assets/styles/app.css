@@ -1,0 +1,61 @@
+@import "magic.css";
+@import "footer.css";
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    height:200px;
+}
+body {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+h1 {
+    border-bottom: 4px double #ccc;
+}
+
+body {
+    body {
+        background: url('../images/plan.jpg');
+        background-size: cover;
+    }
+}
+
+.databas {
+    max-width: 400px;
+}
+
+.nav a:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    text-align: left;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 20px;
+    color: #333333;
+    text-decoration: none;
+    padding-right: 4em;
+    transition: box-shadow 0.6s ease;
+    cursor: pointer;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.hidden {
+    display: none;
+}

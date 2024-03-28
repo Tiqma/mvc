@@ -1,0 +1,16 @@
+{# templates/lucky_number.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Magic number{% endblock %}
+
+{% block body %}
+    <div class="magic">
+        <h1 class="magicTitle">Magic number</h1>
+
+        <p class="magicP">{{ number }}</p>
+        <div class="wil">
+        <img src="{{ asset('build/images/wil.gif') }}" alt="">
+        </div>
+    </div>
+{% endblock %}
