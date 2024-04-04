@@ -13,7 +13,7 @@ class LuckyControllerJson
     {
         $landing = "/api";
         $quote = "/api/quote";
-        
+
         $data = [
             'all-apis' => 'These are the api routes!',
             'landing' => $landing,
