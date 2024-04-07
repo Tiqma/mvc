@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block title %}JSON API{% endblock %}
+
+{% block body %}
+    <h1>JSON API</h1>
+
+     <p><strong><a href="{{ path('api') }}">/api</a></strong>: Landingssidan som visar en översikt över tillgängliga API-rutter.</p>
+
+    <p><strong><a href="{{ path('api_quote') }}">/api/quote</a></strong>: Returnerar ett slumpmässigt citat i JSON-format.</p>
+
+    <p><strong><a href="{{ path('api_deck_get') }}">/api/deck</a></strong>: Initialiserar och returnerar en ny kortlek i JSON-format.</p>
+
+    <form action="{{ path('api_shuffle_post') }}" method="POST">
+        <p><strong><button type="submit">/api/deck/shuffle</button></strong>: Blandar kortleken och returnerar den blandade kortleken i JSON-format.</p>
+    </form>
+
+    <form action="{{ path('api_deck_draw_one') }}" method="POST">
+        <p><strong><button type="submit">/api/deck/draw</button></strong>: Drar ett angivet antal kort från kortleken och returnerar dem i JSON-format.</p>
+    </form>
+
+    <p><strong>/api/deck/draw/{numCards<\d+>}</strong>: Drar ett angivet antal kort från 
+    kortleken och returnerar dem i JSON-format. Antalet kort anges i URL:en.</p>
+
+    <form action="{{ path('api_deck_draw_more', { 'numCards': 2 }) }}" method="POST">
+    </select>
+    <button type="submit">Draw 2</button>
+    </form>
+    <form action="{{ path('api_deck_draw_more', { 'numCards': 3 }) }}" method="POST">
+    </select>
+    <button type="submit">Draw 3</button>
+    </form>
+    <form action="{{ path('api_deck_draw_more', { 'numCards': 4 }) }}" method="POST">
+    </select>
+    <button type="submit">Draw 4</button>
+    </form>
+    <form action="{{ path('api_deck_draw_more', { 'numCards': 5 }) }}" method="POST">
+    </select>
+    <button type="submit">Draw 5</button>
+    </form>
+    <form action="{{ path('api_deck_draw_more', { 'numCards': 6 }) }}" method="POST">
+    </select>
+    <button type="submit">Draw 6</button>
+    </form>
+{% endblock %}

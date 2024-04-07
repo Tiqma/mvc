@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card{% endblock %}
+
+{% block body %}
+    <h1>Card</h1>
+    <a href="{{ path('deck_of_cards') }}">Deck Of Cards</a><br>
+    <a href="{{ path('card_init_get') }}">Init Card Game</a><br>
+    <a href="{{ path('card_deck_shuffle') }}">Shuffle Deck</a><br>
+    <a href="{{ path('card_deck_draw') }}">Draw Card</a><br>
+    <a href="{{ path('session') }}">Session</a><br>
+    <a href="{{ path('session_delete') }}">Delete Session</a><br>
+    <img src="{{ asset('build/images/mvc.drawio.png') }}" alt="">
+    <p>Jag har två klasser, DeckOfCards och CardHand. Det mesta sker i DeckOfCards där kortleken
+    initialiserar, shufflas och dras kort. Om man drar fler kort så använder vi CardHand som håller 
+    koll på vilka kort som har dragits.</p>
+{% endblock %}

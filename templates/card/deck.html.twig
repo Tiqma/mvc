@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Deck of Cards{% endblock %}
+
+{% block body %}
+    <h1>Deck of Cards</h1>
+    <ul class="card-list">
+    {% for card in cards %}
+    {% if (loop.index) % 13 == 0 %}
+        <br><p></p><br><br>
+    {% endif %}
+    <li>{{ card }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

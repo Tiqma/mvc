@@ -1,0 +1,11 @@
+.card-list {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+}
+
+.card-list li {
+list-style: none;
+padding: 10px;
+border: 1px solid #ccc;
+}

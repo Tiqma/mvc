@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Draw Multiple Cards{% endblock %}
+
+{% block body %}
+    <h1>Draw Multiple Cards</h1>
+    {% if drawnCards is defined %}
+        {% if drawnCards is iterable %}
+            {% for card in drawnCards %}
+                <p>Drawn Card: {{ card }}</p>
+            {% endfor %}
+        {% else %}
+            <p>Drawn Card: {{ drawnCards }}</p>
+        {% endif %}
+    {% else %}
+        <p>No more cards in the deck.</p>
+    {% endif %}
+
+    <p>Number of Cards Drawn: {{ numCards }}</p>
+
+    <p>Remaining Cards: {{ remainingCardsCount }}</p>
+
+    <a href="{{ path('card_deck_draw') }}">Draw One Card</a><br>
+    <a href="{{ path('card_deck_draw_more', {'numCards': 2}) }}">Draw Two Cards</a><br>
+    <a href="{{ path('card_deck_draw_more', {'numCards': 3}) }}">Draw Three Cards</a><br>
+    <a href="{{ path('card_deck_draw_more', {'numCards': 4}) }}">Draw Four Cards</a><br>
+    <a href="{{ path('card_deck_draw_more', {'numCards': 5}) }}">Draw Five Cards</a><br>
+
+{% endblock %}
