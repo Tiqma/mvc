@@ -20,6 +20,7 @@ class DeckOfCards
         foreach ($this->suits as $suit) {
             foreach ($this->ranks as $rank) {
                 $this->deck[] = $suit . $rank;
+                //$this->deck[] = new CardGraphic($suit, $rank);
             }
         }
     }

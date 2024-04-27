@@ -77,10 +77,11 @@ class CardController extends AbstractController
     }
 
     #[Route("/card/deck/shuffle", name: "card_deck_shuffle")]
-    public function shuffle(SessionInterface $session): Response
-    {
+    public function shuffle(
+        SessionInterface $session
+    ): Response {
         $deckOfCards = new DeckOfCards();
-
+        $deckOfCards->shuffleDeck();
         $shuffledDeck = $deckOfCards->getDeck();
 
         $session->set("deck", $shuffledDeck);
@@ -91,8 +92,9 @@ class CardController extends AbstractController
     }
 
     #[Route("/card/deck/draw", name: "card_deck_draw")]
-    public function draw(SessionInterface $session): Response
-    {
+    public function draw(
+        SessionInterface $session
+    ): Response {
         $deckOfCards = $session->get('deck');
         $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
 
@@ -108,8 +110,10 @@ class CardController extends AbstractController
     }
 
     #[Route("/card/deck/draw/{numCards<\d+>}", name: "card_deck_draw_more")]
-    public function drawMoreCards(SessionInterface $session, int $numCards): Response
-    {
+    public function drawMoreCards(
+        SessionInterface $session,
+        int $numCards
+    ): Response {
         $deckOfCards = $session->get('deck');
         $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
 

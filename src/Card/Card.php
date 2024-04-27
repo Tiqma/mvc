@@ -4,16 +4,27 @@ namespace App\Card;
 
 class Card
 {
-    private $deck;
+    protected $suit;
+    protected $rank;
 
-    public function __construct(DeckOfCards $deck)
+    public function __construct($suit, $rank)
     {
-        $this->deck = $deck;
+        $this->suit = $suit;
+        $this->rank = $rank;
     }
 
-    public function draw()
+    public function getSuit()
     {
-        $card = $this->deck->drawCard();
-        return $card;
+        return $this->suit;
+    }
+
+    public function getRank()
+    {
+        return $this->rank;
+    }
+
+    public function getCard()
+    {
+        return $this->suit . $this->rank;
     }
 }
