@@ -11,7 +11,9 @@
     <a href="{{ path('session') }}">Session</a><br>
     <a href="{{ path('session_delete') }}">Delete Session</a><br>
     <img src="{{ asset('build/images/mvc.drawio.png') }}" alt="">
-    <p>Jag har två klasser, DeckOfCards och CardHand. Det mesta sker i DeckOfCards där kortleken
-    initialiserar, shufflas och dras kort. Om man drar fler kort så använder vi CardHand som håller 
-    koll på vilka kort som har dragits.</p>
+    <p>Jag har fyra klasser, DeckOfCards och CardHand, Card och CardGraphic. För tillfället är det 
+    DeckOfCards och CardHand som används för att bygga upp hemsidan och spelet.
+    Men om jag vill få ut finare stil på korten hade jag tänkt implementera Card och CardGraphic.
+    Det mesta sker i DeckOfCards där kortleken initialiserar, shufflas och dras kort. Om man 
+    drar fler kort så använder vi CardHand som håller koll på vilka kort som har dragits.</p>
 {% endblock %}
