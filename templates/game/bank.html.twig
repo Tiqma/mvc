@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Intro{% endblock %}
+
+{% block body %}
+    <h1>Bankirens resultat</h1>
+
+    <h2>Spelarens hand</h2>
+    <ul>
+        {% for card in playerHand %}
+            <li>{{ card }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total poäng: {{ playerPoints }}</p>
+
+    <h2>Bankirens hand</h2>
+    <ul>
+        {% for card in bankerHand %}
+            <li>{{ card }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total poäng: {{ bankerPoints }}</p>
+
+    {% if winner == 'Player' %}
+        <p>Grattis, spelaren vann!</p>
+    {% elseif winner == 'Banker' %}
+        <p>Bankiren vann!</p>
+    {% endif %}
+
+    {% if playerHasBusted %}
+        <p>Spelaren bustade.</p>
+    {% endif %}
+
+    {% if bankerHasBusted %}
+        <p>Bankiren bustade.</p>
+    {% endif %}
+
+{% endblock %}

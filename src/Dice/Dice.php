@@ -4,7 +4,7 @@ namespace App\Dice;
 
 class Dice
 {
-    protected $value;
+    protected ?int $value;
 
     public function __construct()
     {
@@ -19,6 +19,9 @@ class Dice
 
     public function getValue(): int
     {
+        if ($this->value === null) {
+            throw new \RuntimeException("Tärningen har inte rullats ännu.");
+        }
         return $this->value;
     }
 

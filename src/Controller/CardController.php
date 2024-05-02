@@ -95,6 +95,7 @@ class CardController extends AbstractController
     public function draw(
         SessionInterface $session
     ): Response {
+        /** @var string[] $deckOfCards */
         $deckOfCards = $session->get('deck');
         $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
 
@@ -114,6 +115,7 @@ class CardController extends AbstractController
         SessionInterface $session,
         int $numCards
     ): Response {
+        /** @var string[] $deckOfCards */
         $deckOfCards = $session->get('deck');
         $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
 

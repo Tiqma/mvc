@@ -80,6 +80,15 @@ class LuckyControllerJson extends AbstractController
     public function initCallback(SessionInterface $session): JsonResponse
     {
         $deck = $session->get("deck", new DeckOfCards());
+
+        if ($deck === null) {
+            throw new \RuntimeException("Deck not initialized.");
+        }
+
+        if (!$deck instanceof DeckOfCards) {
+            throw new \RuntimeException("Invalid deck in session.");
+        }
+
         $deck->shuffleDeck();
 
         $session->set('deck', $deck->getDeck());
@@ -94,6 +103,7 @@ class LuckyControllerJson extends AbstractController
     #[Route("/api/deck/draw", name: "api_deck_draw_one", methods: ['POST'])]
     public function drawOneCard(SessionInterface $session): JsonResponse
     {
+        /** @var string[] $deck */
         $deck = $session->get("deck");
         $deck = DeckOfCards::createFromSession($deck);
         $drawnCard = $deck->drawCard();
@@ -112,6 +122,7 @@ class LuckyControllerJson extends AbstractController
     #[Route("/api/deck/draw/{numCards<\d+>}", name: "api_deck_draw_more", methods: ['POST'])]
     public function drawMoreCards(SessionInterface $session, int $numCards): JsonResponse
     {
+        /** @var string[] $deckOfCards */
         $deckOfCards = $session->get('deck');
         $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
         $drawnCards = $deckOfCards->drawCards($numCards);

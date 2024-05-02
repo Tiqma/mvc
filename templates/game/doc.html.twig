@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Intro{% endblock %}
+
+{% block body %}
+    <h1>Dokumentering Game 21</h1>
+
+    <img src="{{ asset('build/images/21.drawio.png') }}" alt="" class="databas">
+
+        {% apply markdown_to_html %}
+        För att ge korten deras respektive poäng:
+
+        om kort == 2:
+
+            poäng += 2
+        
+        För att kolla om man är tjock:
+
+        om poäng > 21:
+
+            du är tjok!
+
+        Jag kommer behöva implementera en klass, "Game" som ger regler och poäng till kort.
+
+        Sen kan jag skapa en klass för att hålla koll på banken och spelare, "Players".
+        {% endapply %}
+{% endblock %}

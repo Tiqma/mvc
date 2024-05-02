@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Draw from Deck{% endblock %}
+
+{% block body %}
+    <h1>Draw from Deck</h1>
+
+    <div class="card">
+        {% if drawnCard is defined %}
+            <p>Drawn Card: {{ drawnCard }}</p>
+        {% else %}
+            <p>No card was drawn.</p>
+        {% endif %}
+    </div>
+
+    <p>Remaining Cards in Deck: {{ remainingCardsCount }}</p>
+
+    <div>
+        <h2>Player's Hand</h2>
+        {% if hand is defined and hand is not empty %}
+            <ul>
+                {% for card in hand %}
+                    <li>{{ card }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No cards in hand.</p>
+        {% endif %}
+    </div>
+
+    <p>Total Value of Hand: {{ totalpoints }}</p>
+
+    {% if hasBusted %}
+    <p>Spelaren har bustat!</p>
+    <form action="{{ path('bank') }}" method="post">
+        <button type="submit">Låt Bankiren Spela</button>
+    </form>
+    {% else %}
+        {# Länk för att dra ett annat kort #}
+        <a href="{{ path('draw_21') }}">Draw Another Card</a><br>
+        <form action="{{ path('bank') }}" method="post">
+        <button type="submit">Stay</button>
+    </form>
+    {% endif %}
+{% endblock %}
+

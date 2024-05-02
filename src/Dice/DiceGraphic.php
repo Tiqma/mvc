@@ -4,7 +4,12 @@ namespace App\Dice;
 
 class DiceGraphic extends Dice
 {
-    private $representation = [
+    /**
+     * Grafiska representationer av tärningssidor.
+     *
+     * @var string[]
+     */
+    private array $representation = [
         '⚀',
         '⚁',
         '⚂',

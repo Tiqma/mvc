@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Intro{% endblock %}
+
+{% block body %}
+    <h1>Välkommen till spelet 21</h1>
+
+    <form method="POST" action="{{ path('draw_21') }}">
+            <button type="submit">Start the Game</button>   {# Knapp för att skicka formuläret #}
+    </form>
+
+{% endblock %}

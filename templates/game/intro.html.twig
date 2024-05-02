@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Intro{% endblock %}
+
+{% block body %}
+    <h1>Välkommen till spelet 21</h1>
+
+    <img src="{{ asset('build/images/21.drawio.png') }}" alt="" class="databas">
+
+        {% apply markdown_to_html %}
+        Du kommer tävla mot bankiren. Du kommer dra valfritt många kort och du kan stanna när du vill.
+
+        Du ska komma så nära poängsumman 21 som möjligt. Får du mer poäng än det så blir du tjock och
+        
+        bankiren har vunnit.
+
+        Nummekorten har samma värden som valören.
+
+        Knekt har värde 11.
+
+        Dam har värde 12.
+
+        Kung har värde 13.
+
+        Ess har värde 14.
+
+        <form method="POST" action="{{ path('start') }}">
+            <button type="submit">Start the Game</button>   {# Knapp för att skicka formuläret #}
+        </form>
+        {% endapply %}
+{% endblock %}

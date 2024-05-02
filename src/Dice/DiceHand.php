@@ -6,7 +6,8 @@ use App\Dice\Dice;
 
 class DiceHand
 {
-    private $hand = [];
+    /** @var Dice[] */
+    private array $hand = [];
 
     public function add(Dice $die): void
     {
@@ -25,6 +26,11 @@ class DiceHand
         return count($this->hand);
     }
 
+    /**
+     * Returnerar värdena för varje tärning i handen.
+     *
+     * @return int[]
+     */
     public function getValues(): array
     {
         $values = [];
@@ -34,12 +40,17 @@ class DiceHand
         return $values;
     }
 
+    /**
+     * Returnerar strängrepresentationerna för varje tärning i handen.
+     *
+     * @return string[]
+     */
     public function getString(): array
     {
-        $values = [];
+        $strings = [];
         foreach ($this->hand as $die) {
-            $values[] = $die->getAsString();
+            $strings[] = $die->getAsString();
         }
-        return $values;
+        return $strings;
     }
 }
