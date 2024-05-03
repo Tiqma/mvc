@@ -2,6 +2,8 @@
 
 namespace App\Dice;
 
+use RuntimeException;
+
 class Dice
 {
     protected ?int $value;
@@ -20,7 +22,7 @@ class Dice
     public function getValue(): int
     {
         if ($this->value === null) {
-            throw new \RuntimeException("Tärningen har inte rullats ännu.");
+            throw new RuntimeException("Tärningen har inte rullats ännu.");
         }
         return $this->value;
     }

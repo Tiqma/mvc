@@ -4,26 +4,48 @@ namespace App\Card;
 
 class Card
 {
-    protected $suit;
-    protected $rank;
+    /** @var string */
+    protected string $suit;
 
-    public function __construct($suit, $rank)
+    /** @var string */
+    protected string $rank;
+
+    /**
+     * @param string $suit
+     * @param string $rank
+     */
+    public function __construct(string $suit, string $rank)
     {
         $this->suit = $suit;
         $this->rank = $rank;
     }
 
-    public function getSuit()
+    /**
+     * Returnerar färgen på kortet.
+     *
+     * @return string
+     */
+    public function getSuit(): string
     {
         return $this->suit;
     }
 
-    public function getRank()
+    /**
+     * Returnerar ranken på kortet.
+     *
+     * @return string
+     */
+    public function getRank(): string
     {
         return $this->rank;
     }
 
-    public function getCard()
+    /**
+     * Returnerar färg och rank på kortet.
+     *
+     * @return string
+     */
+    public function getCard(): string
     {
         return $this->suit . $this->rank;
     }

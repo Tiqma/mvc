@@ -14,6 +14,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CardController extends AbstractController
 {
+    private DeckOfCards $deckOfCardsService;
+
+    public function __construct(DeckOfCards $deckOfCardsService)
+    {
+        $this->deckOfCardsService = $deckOfCardsService;
+    }
+
     #[Route("/session", name: "session")]
     public function session(
         SessionInterface $session
@@ -41,7 +48,6 @@ class CardController extends AbstractController
 
     #[Route("/card", name:"card")]
     public function card(
-        SessionInterface $session
     ): Response {
         return $this->render("card/card.html.twig");
     }
@@ -64,7 +70,6 @@ class CardController extends AbstractController
 
     #[Route("/card/init", name: "card_init_post", methods: ['POST'])]
     public function initCallback(
-        Request $request,
         SessionInterface $session
     ): Response {
         $deck = new DeckOfCards();
@@ -95,9 +100,9 @@ class CardController extends AbstractController
     public function draw(
         SessionInterface $session
     ): Response {
-        /** @var string[] $deckOfCards */
-        $deckOfCards = $session->get('deck');
-        $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deckOfCards = $this->deckOfCardsService->createFromSession($deckData);
 
         $drawnCard = $deckOfCards->drawCard();
         $remainingCardsCount = $deckOfCards->countCards();
@@ -115,9 +120,9 @@ class CardController extends AbstractController
         SessionInterface $session,
         int $numCards
     ): Response {
-        /** @var string[] $deckOfCards */
-        $deckOfCards = $session->get('deck');
-        $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deckOfCards = $this->deckOfCardsService->createFromSession($deckData);
 
         $drawnCards = $deckOfCards->drawCards($numCards);
         $drawnCards = $drawnCards->getHand();

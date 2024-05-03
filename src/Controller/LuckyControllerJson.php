@@ -4,10 +4,11 @@ namespace App\Controller;
 
 use App\Card\CardHand;
 use App\Card\DeckOfCards;
-
+use App\Game\Player;
+use App\Game\Bank;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-
+use RuntimeException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LuckyControllerJson extends AbstractController
 {
+    private DeckOfCards $deckOfCardsService;
+
+    public function __construct(DeckOfCards $deckOfCardsService)
+    {
+        $this->deckOfCardsService = $deckOfCardsService;
+    }
     #[Route("/api", name: "api")]
     public function apiLandingPage(): Response
     {
@@ -24,6 +31,7 @@ class LuckyControllerJson extends AbstractController
         $deckShuffle = "/api/deck/shuffle";
         $deckDraw = "/api/deck/draw";
         $deckDrawMore = "/api/deck/draw/{number}";
+        $gameStatus = "/api/game";
 
         $routes = [
             'landing' => $landing,
@@ -31,7 +39,8 @@ class LuckyControllerJson extends AbstractController
             'deck' => $deck,
             'shuffle' => $deckShuffle,
             'draw' => $deckDraw,
-            'drawMore' => $deckDrawMore
+            'drawMore' => $deckDrawMore,
+            'game' => $gameStatus
         ];
 
         return $this->render('api/api.html.twig', [
@@ -82,11 +91,11 @@ class LuckyControllerJson extends AbstractController
         $deck = $session->get("deck", new DeckOfCards());
 
         if ($deck === null) {
-            throw new \RuntimeException("Deck not initialized.");
+            throw new RuntimeException("Deck not initialized.");
         }
 
         if (!$deck instanceof DeckOfCards) {
-            throw new \RuntimeException("Invalid deck in session.");
+            throw new RuntimeException("Invalid deck in session.");
         }
 
         $deck->shuffleDeck();
@@ -103,9 +112,9 @@ class LuckyControllerJson extends AbstractController
     #[Route("/api/deck/draw", name: "api_deck_draw_one", methods: ['POST'])]
     public function drawOneCard(SessionInterface $session): JsonResponse
     {
-        /** @var string[] $deck */
-        $deck = $session->get("deck");
-        $deck = DeckOfCards::createFromSession($deck);
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deck = $this->deckOfCardsService->createFromSession($deckData);
         $drawnCard = $deck->drawCard();
         $remainingCards = $deck->countCards();
 
@@ -122,9 +131,9 @@ class LuckyControllerJson extends AbstractController
     #[Route("/api/deck/draw/{numCards<\d+>}", name: "api_deck_draw_more", methods: ['POST'])]
     public function drawMoreCards(SessionInterface $session, int $numCards): JsonResponse
     {
-        /** @var string[] $deckOfCards */
-        $deckOfCards = $session->get('deck');
-        $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deckOfCards = $this->deckOfCardsService->createFromSession($deckData);
         $drawnCards = $deckOfCards->drawCards($numCards);
         $drawnCards = $drawnCards->getHand();
 
@@ -135,6 +144,34 @@ class LuckyControllerJson extends AbstractController
         $data = [
             'drawn_cards' => $drawnCards,
             'remaining_cards' => $remainingCardsCount,
+        ];
+
+        return new JsonResponse($data);
+    }
+
+    #[Route("/api/game", name: "api_game_status", methods: ['GET'])]
+    public function gameStatus(SessionInterface $session): JsonResponse
+    {
+        /** @var Player $player */
+        $player = $session->get('player');
+        /** @var Bank $banker */
+        $banker = $session->get('banker');
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deck = $this->deckOfCardsService->createFromSession($deckData);
+
+        $data = [
+            'player' => [
+                'hand' => $player->getHand(),
+                'total_points' => $player->getTotalPoints(),
+            ],
+            'banker' => [
+                'hand' => $banker->getHand(),
+                'total_points' => $banker->getTotalPoints(),
+            ],
+            'deck' => [
+                'remaining_cards' => $deck->countCards(),
+            ],
         ];
 
         return new JsonResponse($data);

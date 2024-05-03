@@ -2,18 +2,19 @@
 
 namespace App\Card;
 
+use RuntimeException;
 use App\Card\Card;
 
 class DeckOfCards
 {
     /** @var string[] */
-    private array $suits = ['♠', '♥', '♦', '♣']; // Anger att det är en array av strängar
+    private array $suits = ['♠', '♥', '♦', '♣'];
 
     /** @var string[] */
     private array $ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
     /** @var string[] */
-    private array $deck = []; 
+    private array $deck = [];
 
     public function __construct()
     {
@@ -37,7 +38,7 @@ class DeckOfCards
     /**
      * Returnerar hela kortleken.
      *
-     * @return string[] 
+     * @return string[]
      */
     public function getDeck(): array
     {
@@ -46,11 +47,10 @@ class DeckOfCards
 
     public function drawCard(): string
     {
-        if (count($this->deck) > 0) {
-            return array_pop($this->deck);
-        } else {
-            throw new \RuntimeException("Kortleken är tom. Kan inte dra fler kort.");
+        if (count($this->deck) == 0) {
+            throw new RuntimeException("Kortleken är tom. Kan inte dra fler kort.");
         }
+        return array_pop($this->deck);
     }
 
     /**

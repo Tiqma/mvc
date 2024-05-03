@@ -59,11 +59,28 @@
     {% endapply %}
     </section>
 
-    <section id="kmom03"> <!-- Lägg till id-attributet -->
+    <section id="kmom03">
     {% apply markdown_to_html %}
-    # Kmom03
-    
-    Markdown-innehåll för Kmom03.
+    Det kändes bra att börja med att modellera kortspelet med flödesdiagram och psuedokod. Det hjälpte till att
+    få en klar bild till vad jag borde tänka på först vid programmeringen. Det gav en klar bild. Kan vara ett 
+    bra tillvägagångssätt i framtiden.
+
+    Jag löste uppgiften med att först skapa min Klass "Player", där spelaren kan använda funktionen "hit" för 
+    att dra ett nytt kort. getHand för att hämta hela handen och getTotalPoints för att få totala poängen. 
+    Och lite andra funktioner för funktionalitet för spelet. Player klassen har väl både Game och Player klass 
+    tillsammans.
+
+    Efter det införde jag "Bank" klassen som ärver från Player och jag införde en automatiserad player i stort
+    sätt i den klassen. Banken drar kort tills den har över 17 poäng.
+
+    Efter det var det bara till att få allt att fungera i routen, och när jag var klar och fixade mina errors
+    från linten fick jag införa en ny klass, "Winner" för att undvika Else error.
+
+    Jag känner mig ganska nöjd med min applikation då det inte är alltför mycket kod i routen.
+
+    Min känsla för symfony är positiv, det kan vara lite klurigt ibland men jag vänjer mig mer och mer.
+
+    TIL hur man skriver finare kod i php och lärt mig mer om klasser.
     {% endapply %}
     </section>
 

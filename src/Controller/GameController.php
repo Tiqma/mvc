@@ -7,6 +7,7 @@ use App\Card\CardHand;
 use App\Card\DeckOfCards;
 use App\Game\Player;
 use App\Game\Bank;
+use App\Game\Winner;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
@@ -16,16 +17,25 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class GameController extends AbstractController
 {
+    private DeckOfCards $deckOfCardsService;
+    private Winner $winnerService;
+
+    public function __construct(
+        DeckOfCards $deckOfCardsService,
+        Winner $winnerService
+    ) {
+        $this->deckOfCardsService = $deckOfCardsService;
+        $this->winnerService = $winnerService;
+    }
+
     #[Route("/game/doc", name:"gamedoc")]
     public function gamedoc(
-        SessionInterface $session
     ): Response {
         return $this->render("game/doc.html.twig");
     }
 
     #[Route("/game", name:"introgame")]
     public function intro(
-        SessionInterface $session
     ): Response {
         return $this->render("game/intro.html.twig");
     }
@@ -43,15 +53,16 @@ class GameController extends AbstractController
     }
 
     #[Route("/game/draw", name: "draw_21")]
-    public function drawgame(SessionInterface $session): Response {
+    public function drawgame(SessionInterface $session): Response
+    {
         /** @var Player|null $player */
         $player = $session->get('player', null);
         if ($player === null) {
             $player = new Player();
         }
-        /** @var string[] $deckOfCards */
-        $deckOfCards = $session->get('deck');
-        $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deckOfCards = $this->deckOfCardsService->createFromSession($deckData);
 
         $drawnCard = $deckOfCards->drawCard();
 
@@ -74,28 +85,14 @@ class GameController extends AbstractController
     ): Response {
         /** @var Player $player */
         $player = $session->get('player');
-        /** @var string[] $deckOfCards */
-        $deckOfCards = $session->get('deck');
-        $deckOfCards = DeckOfCards::createFromSession($deckOfCards);
+        /** @var string[] $deckData */
+        $deckData = $session->get('deck');
+        $deckOfCards = $this->deckOfCardsService->createFromSession($deckData);
 
         $banker = new Bank();
         $banker->playBankerTurn($deckOfCards);
-
-        $playerHasBusted = $player->hasBusted();
-        $bankerHasBusted = $banker->hasBusted();
-
-        $winner = null;
-        if ($playerHasBusted) {
-            $winner = 'Banker';
-        } elseif ($bankerHasBusted) {
-            $winner = 'Player';
-        } else {
-            if ($player->getTotalPoints() > $banker->getTotalPoints()) {
-                $winner = 'Player';
-            } else {
-                $winner = 'Banker';
-            }
-        }
+        $session->set('banker', $banker);
+        $winner = $this->winnerService->determine($player, $banker);
 
         return $this->render("game/bank.html.twig", [
             'playerHand' => $player->getHand(),
@@ -103,9 +100,16 @@ class GameController extends AbstractController
             'bankerHand' => $banker->getHand(),
             'bankerPoints' => $banker->getTotalPoints(),
             'winner' => $winner,
-            'playerHasBusted' => $playerHasBusted,
-            'bankerHasBusted' => $bankerHasBusted,
+            'playerHasBusted' => $player->hasBusted(),
+            'bankerHasBusted' => $banker->hasBusted(),
         ]);
     }
-}
 
+    #[Route("/game/reset", name: "reset_game", methods: ['POST'])]
+    public function resetGame(SessionInterface $session): Response
+    {
+        $session->remove('player');
+
+        return $this->redirectToRoute("introgame");
+    }
+}

@@ -4,7 +4,8 @@ namespace App\Card;
 
 class CardGraphic extends Card
 {
-    private $graphics = [
+    /** @var array<string, array<string, string>> */
+    private array $graphics = [
         '♠' => [
             'A' => '🂡', 'K' => '🂮', 'Q' => '🂭', 'J' => '🂫',
             '10' => '🂪', '9' => '🂩', '8' => '🂨', '7' => '🂧',
@@ -31,7 +32,12 @@ class CardGraphic extends Card
         ]
     ];
 
-    public function getGraphic()
+    /**
+     * Returnerar grafisk representation av ett kort.
+     *
+     * @return string|null
+     */
+    public function getGraphic(): ?string
     {
         return $this->graphics[$this->suit][$this->rank] ?? null;
     }

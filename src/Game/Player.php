@@ -20,7 +20,7 @@ class Player
     /**
      * Returnerar spelarens hand.
      *
-     * @return string[] 
+     * @return string[]
      */
     public function getHand(): array
     {
@@ -30,7 +30,7 @@ class Player
     /**
      * Beräknar totalpoängen för spelarens hand.
      *
-     * @return int 
+     * @return int
      */
     public function getTotalPoints(): int
     {
@@ -68,7 +68,7 @@ class Player
     /**
      * Kollar om spelaren har bustat (överstigit 21 poäng).
      *
-     * @return bool 
+     * @return bool
      */
     public function hasBusted(): bool
     {

@@ -34,5 +34,7 @@
     {% if bankerHasBusted %}
         <p>Bankiren bustade.</p>
     {% endif %}
-
+    <form method="POST" action="{{ path('reset_game') }}">
+        <button type="submit">Ny Omgång</button>
+    </form>
 {% endblock %}
