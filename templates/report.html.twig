@@ -86,11 +86,34 @@
     {% endapply %}
     </section>
 
-    <section id="kmom04"> <!-- Lägg till id-attributet -->
+    <section id="kmom04">
     {% apply markdown_to_html %}
-    # Kmom04
+    Jag hade lite erfarenhet av enhetstestning från min kurs i objektorienterad programmering med Python, 
+    så det var inte alltför svårt att greppa konceptet. Det kändes smidigt och enkelt att arbeta med 
+    enhetstester, och med hjälp av PHPUnit kunde jag enkelt få en översikt över vad som behövde testas 
+    i koden. Det var verkligen ett användbart verktyg.
+
+    När det gäller min Game-klass lyckades jag uppnå över 90 % täckning med mina enhetstester, 
+    vilket var mycket tillfredsställande. Jag gjorde också en del tester för min Card-klass, 
+    men nådde bara upp till 70 % täckning där. Det var lite utmanande att testa sessionsfunktionerna, 
+    så jag valde att inte fortsätta med det.
+
+    Jag upplevde att min kod var ganska lätt att testa. Dock är jag osäker på om det finns en metod 
+    för att generera fasta slumpmässiga nummer eller strängar på samma sätt som i Python. Därför är jag inte
+     helt säker på om mina tester för de olika spelarnas kort var helt korrekta med de statiska strängar 
+     jag använde för att simulera korten. Om det finns en bättre metod för att hantera detta skulle det 
+     vara bra att implementera den.
+
+    Jag valde att inte göra några ändringar i min kod efter att ha genomfört enhetstestningen.
+
+    Testbar kod är definitivt ett kännetecken på välskriven kod eftersom det inte bara hjälper 
+    till att säkerställa att koden fungerar korrekt, utan också sätter en standard för hur koden 
+    ska utföras om fler personer involveras i utvecklingen av projektet. Det ser till att 
+    förståelse och underhållbarhet håller bra standard.
+
+    TIL hur man enhetstestar i PHP och de olika program som används till det tex PHPUnit och doc.
     
-    Markdown-innehåll för Kmom04.
+    
     {% endapply %}
     </section>
 
