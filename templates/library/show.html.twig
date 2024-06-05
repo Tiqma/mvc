@@ -1,0 +1,15 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block body %}
+<div class="details-container">
+    <h1>{{ book.title }}</h1>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+    <p><img src="{{ asset('build/images/' ~ book.image) }}" alt="{{ book.title }}" class="databas"></p>
+    <a href="{{ path('book_list') }}" class="back-link">Back to list</a>
+</div>
+{% endblock %}
+

@@ -88,6 +88,8 @@
 
     <section id="kmom04">
     {% apply markdown_to_html %}
+    # Kmom04
+
     Jag hade lite erfarenhet av enhetstestning från min kurs i objektorienterad programmering med Python, 
     så det var inte alltför svårt att greppa konceptet. Det kändes smidigt och enkelt att arbeta med 
     enhetstester, och med hjälp av PHPUnit kunde jag enkelt få en översikt över vad som behövde testas 
@@ -117,11 +119,27 @@
     {% endapply %}
     </section>
 
-    <section id="kmom05"> <!-- Lägg till id-attributet -->
+    <section id="kmom05">
     {% apply markdown_to_html %}
     # Kmom05
     
-    Markdown-innehåll för Kmom05.
+    Femte kmomet avklarat och även denna delen har varit lärorik. Denna gången introducerades doctrine där
+    man enkelt kan generera kod genom konsollen. Jag tänkte hur smidigt man kunde få till de olika konrollerna
+    och diverse moduler ifrån doctrine vilket sparar tid.
+
+    Min applikation är uppbyggd så som att man enkelt kan hoppa mellan de olika böckerna och bibliotektet. Det 
+    finns alltid nåt sätt att ta sig tillbaka där man var. Min READ MANY fungerar väl som en hub för hela
+    applikationen.
+
+    Det blev enkelt att jobba med ORM då de genererade bra funktioner utifrån migration delen. Det skapar en
+    redan färdig perfekt utgångspunkt för att få ihop sina routes. Det blir ett smidigare sätt än att skriva
+    sql kod där man måste selecta och kringgå problem för att lösa CRUD.
+
+    Min uppfattning av ORM är att det förenklar utvecklingen med sina självgenererande kod samt att den skapar
+    de olika moduler man behöver. Det blir betydligt smidigare än att behöva göra som vi gjorde i databaskursen
+    där man behövde göra egna funktioner för att kunna hantera och ändra i databasen.
+
+    TIL hur man använder doctrine för att skapa nya applikationer med hjälp av symphony.
     {% endapply %}
     </section>
 

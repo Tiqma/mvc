@@ -44,4 +44,8 @@
     </form>
 
     <p><strong><a href="{{ path('api_game_status') }}">/api/game</a></strong>: Returnerar stående resultat från 21.</p>
+
+    <p><strong><a href="{{ path('api_books') }}">/api/library/books</a></strong>: Boklista i Json-format.</p>
+
+    <p><strong><a href="{{ path('api_book', {isbn: '123'}) }}">/api/library/book/123</a></strong>: Boken Skogen i Json-format</p>
 {% endblock %}

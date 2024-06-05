@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Book{% endblock %}
+
+{% block body %}
+<div class="form-container">
+    <a href="{{ path('book_show', { isbn: book.isbn }) }}" class="back-link">Back to book details</a>
+    <h1>Edit Book</h1>
+
+    <form action="{{ path('book_update', { isbn: book.isbn }) }}" method="POST">
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{ book.title }}">
+        </div>
+        <div>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" value="{{ book.author }}">
+        </div>
+        <div>
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" name="image" value="{{ book.image }}">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+
+</div>
+{% endblock %}
