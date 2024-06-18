@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717610345">
-  <project timestamp="1717610345">
+<coverage generated="1718724269">
+  <project timestamp="1718724269">
     <file name="/home/tiqma/dbwebb-kurser/mvc/me/report/src/Card/Card.php">
       <class name="App\Card\Card" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="9" coveredelements="0"/>
@@ -688,20 +688,20 @@
     </file>
     <file name="/home/tiqma/dbwebb-kurser/mvc/me/report/src/Game/Player.php">
       <class name="App\Game\Player" namespace="global">
-        <metrics complexity="12" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="19" elements="25" coveredelements="23"/>
+        <metrics complexity="12" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="18" elements="25" coveredelements="22"/>
       </class>
       <line num="15" type="method" name="hit" visibility="public" complexity="1" crap="1" count="12"/>
       <line num="17" type="stmt" count="12"/>
       <line num="25" type="method" name="getHand" visibility="public" complexity="1" crap="1" count="2"/>
       <line num="27" type="stmt" count="2"/>
-      <line num="35" type="method" name="getTotalPoints" visibility="public" complexity="8" crap="8.02" count="11"/>
+      <line num="35" type="method" name="getTotalPoints" visibility="public" complexity="8" crap="8.12" count="11"/>
       <line num="37" type="stmt" count="11"/>
       <line num="39" type="stmt" count="11"/>
       <line num="40" type="stmt" count="11"/>
       <line num="41" type="stmt" count="11"/>
-      <line num="42" type="stmt" count="3"/>
-      <line num="43" type="stmt" count="3"/>
-      <line num="44" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="2"/>
+      <line num="43" type="stmt" count="2"/>
+      <line num="44" type="stmt" count="0"/>
       <line num="46" type="stmt" count="11"/>
       <line num="47" type="stmt" count="8"/>
       <line num="48" type="stmt" count="3"/>
@@ -715,7 +715,7 @@
       <line num="65" type="stmt" count="1"/>
       <line num="73" type="method" name="hasBusted" visibility="public" complexity="1" crap="1" count="7"/>
       <line num="75" type="stmt" count="7"/>
-      <metrics loc="78" ncloc="54" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="19" elements="25" coveredelements="23"/>
+      <metrics loc="78" ncloc="54" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="18" elements="25" coveredelements="22"/>
     </file>
     <file name="/home/tiqma/dbwebb-kurser/mvc/me/report/src/Game/Winner.php">
       <class name="App\Game\Winner" namespace="global">
@@ -771,6 +771,6 @@
       <line num="54" type="stmt" count="0"/>
       <metrics loc="58" ncloc="42" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="16" coveredelements="0"/>
     </file>
-    <metrics files="23" loc="1802" ncloc="1600" classes="22" methods="115" coveredmethods="21" conditionals="0" coveredconditionals="0" statements="517" coveredstatements="52" elements="632" coveredelements="73"/>
+    <metrics files="23" loc="1802" ncloc="1600" classes="22" methods="115" coveredmethods="21" conditionals="0" coveredconditionals="0" statements="517" coveredstatements="51" elements="632" coveredelements="72"/>
   </project>
 </coverage>
