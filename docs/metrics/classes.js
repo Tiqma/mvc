@@ -76,6 +76,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 2,
         "instability": 0.67,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -145,9 +146,10 @@ var classes = [
         "totalSystemComplexity": 72.43,
         "package": "App\\Repository\\",
         "pageRank": 0.01,
-        "afferentCoupling": 2,
+        "afferentCoupling": 3,
         "efferentCoupling": 2,
-        "instability": 0.5,
+        "instability": 0.4,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -211,6 +213,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 2,
         "instability": 0.67,
+        "numberOfUnitTests": 5,
         "violations": {}
     },
     {
@@ -283,6 +286,7 @@ var classes = [
         "afferentCoupling": 2,
         "efferentCoupling": 2,
         "instability": 0.5,
+        "numberOfUnitTests": 9,
         "violations": {}
     },
     {
@@ -338,26 +342,26 @@ var classes = [
         "parents": [],
         "implements": [],
         "lcom": 1,
-        "length": 60,
+        "length": 54,
         "vocabulary": 23,
-        "volume": 271.41,
-        "difficulty": 8.53,
-        "effort": 2315.5,
-        "level": 0.12,
-        "bugs": 0.09,
-        "time": 129,
-        "intelligentContent": 31.81,
-        "number_operators": 21,
-        "number_operands": 39,
+        "volume": 244.27,
+        "difficulty": 7.88,
+        "effort": 1923.64,
+        "level": 0.13,
+        "bugs": 0.08,
+        "time": 107,
+        "intelligentContent": 31.02,
+        "number_operators": 18,
+        "number_operands": 36,
         "number_operators_unique": 7,
         "number_operands_unique": 16,
         "cloc": 24,
-        "loc": 67,
-        "lloc": 43,
-        "mi": 86.25,
-        "mIwoC": 46.25,
-        "commentWeight": 40,
-        "kanDefect": 0.52,
+        "loc": 75,
+        "lloc": 51,
+        "mi": 83.38,
+        "mIwoC": 44.96,
+        "commentWeight": 38.42,
+        "kanDefect": 0.74,
         "relativeStructuralComplexity": 1,
         "relativeDataComplexity": 1.6,
         "relativeSystemComplexity": 2.6,
@@ -369,6 +373,7 @@ var classes = [
         "afferentCoupling": 3,
         "efferentCoupling": 0,
         "instability": 0,
+        "numberOfUnitTests": 8,
         "violations": {}
     },
     {
@@ -452,6 +457,7 @@ var classes = [
         "afferentCoupling": 3,
         "efferentCoupling": 1,
         "instability": 0.25,
+        "numberOfUnitTests": 11,
         "violations": {}
     },
     {
@@ -523,6 +529,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 1,
         "instability": 0.5,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -613,6 +620,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 1,
         "instability": 0.5,
+        "numberOfUnitTests": 4,
         "violations": {}
     },
     {
@@ -669,6 +677,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 1,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -747,6 +756,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 0,
         "instability": 0,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -845,6 +855,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 0,
         "instability": 0,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -864,142 +875,59 @@ var classes = [
                 "public": true,
                 "private": false,
                 "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getQuote",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "init",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "initCallback",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "drawOneCard",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "drawMoreCards",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "gameStatus",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getBooks",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
-            },
-            {
-                "name": "getBookByIsbn",
-                "role": null,
-                "public": true,
-                "private": false,
-                "_type": "Hal\\Metric\\FunctionMetric"
             }
         ],
-        "nbMethodsIncludingGettersSetters": 10,
-        "nbMethods": 9,
+        "nbMethodsIncludingGettersSetters": 2,
+        "nbMethods": 1,
         "nbMethodsPrivate": 0,
-        "nbMethodsPublic": 9,
+        "nbMethodsPublic": 1,
         "nbMethodsGetter": 0,
         "nbMethodsSetters": 1,
-        "wmc": 13,
-        "ccn": 5,
-        "ccnMethodMax": 3,
+        "wmc": 1,
+        "ccn": 1,
+        "ccnMethodMax": 1,
         "externals": [
             "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
             "App\\Card\\DeckOfCards",
-            "Symfony\\Component\\HttpFoundation\\Response",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
-            "App\\Card\\DeckOfCards",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
-            "App\\Card\\DeckOfCards",
-            "RuntimeException",
-            "RuntimeException",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "App\\Repository\\BookRepository",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "App\\Repository\\BookRepository",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse",
-            "Symfony\\Component\\HttpFoundation\\JsonResponse"
+            "Symfony\\Component\\HttpFoundation\\Response"
         ],
         "parents": [
             "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
         ],
         "implements": [],
-        "lcom": 7,
-        "length": 262,
-        "vocabulary": 80,
-        "volume": 1656.35,
-        "difficulty": 5.55,
-        "effort": 9197.07,
-        "level": 0.18,
-        "bugs": 0.55,
-        "time": 511,
-        "intelligentContent": 298.3,
-        "number_operators": 51,
-        "number_operands": 211,
-        "number_operators_unique": 4,
-        "number_operands_unique": 76,
-        "cloc": 14,
-        "loc": 111,
-        "lloc": 97,
-        "mi": 59.59,
-        "mIwoC": 33.45,
-        "commentWeight": 26.14,
-        "kanDefect": 0.59,
-        "relativeStructuralComplexity": 289,
-        "relativeDataComplexity": 0.61,
-        "relativeSystemComplexity": 289.61,
-        "totalStructuralComplexity": 2890,
-        "totalDataComplexity": 6.11,
-        "totalSystemComplexity": 2896.11,
+        "lcom": 1,
+        "length": 48,
+        "vocabulary": 25,
+        "volume": 222.91,
+        "difficulty": 1.65,
+        "effort": 368.28,
+        "level": 0.61,
+        "bugs": 0.07,
+        "time": 20,
+        "intelligentContent": 134.92,
+        "number_operators": 10,
+        "number_operands": 38,
+        "number_operators_unique": 2,
+        "number_operands_unique": 23,
+        "cloc": 1,
+        "loc": 22,
+        "lloc": 21,
+        "mi": 70.8,
+        "mIwoC": 54.58,
+        "commentWeight": 16.22,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 1,
+        "relativeDataComplexity": 0.75,
+        "relativeSystemComplexity": 1.75,
+        "totalStructuralComplexity": 2,
+        "totalDataComplexity": 1.5,
+        "totalSystemComplexity": 3.5,
         "package": "App\\Controller\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
-        "efferentCoupling": 7,
+        "efferentCoupling": 3,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1121,6 +1049,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 7,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1130,7 +1059,7 @@ var classes = [
         "final": false,
         "methods": [
             {
-                "name": "number",
+                "name": "metrics",
                 "role": null,
                 "public": true,
                 "private": false,
@@ -1147,9 +1076,12 @@ var classes = [
         "ccn": 1,
         "ccnMethodMax": 1,
         "externals": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
             "Symfony\\Component\\HttpFoundation\\Response"
         ],
-        "parents": [],
+        "parents": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
+        ],
         "implements": [],
         "lcom": 1,
         "length": 5,
@@ -1181,8 +1113,76 @@ var classes = [
         "package": "App\\Controller\\",
         "pageRank": 0.01,
         "afferentCoupling": 0,
-        "efferentCoupling": 1,
+        "efferentCoupling": 2,
         "instability": 1,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Controller\\ApiQuoteController",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getQuote",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 1,
+        "nbMethods": 1,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 1,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 1,
+        "ccn": 1,
+        "ccnMethodMax": 1,
+        "externals": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse"
+        ],
+        "parents": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
+        ],
+        "implements": [],
+        "lcom": 1,
+        "length": 20,
+        "vocabulary": 14,
+        "volume": 76.15,
+        "difficulty": 1.33,
+        "effort": 101.53,
+        "level": 0.75,
+        "bugs": 0.03,
+        "time": 6,
+        "intelligentContent": 57.11,
+        "number_operators": 4,
+        "number_operands": 16,
+        "number_operators_unique": 2,
+        "number_operands_unique": 12,
+        "cloc": 1,
+        "loc": 12,
+        "lloc": 11,
+        "mi": 85.6,
+        "mIwoC": 63.97,
+        "commentWeight": 21.62,
+        "kanDefect": 0.15,
+        "relativeStructuralComplexity": 0,
+        "relativeDataComplexity": 1,
+        "relativeSystemComplexity": 1,
+        "totalStructuralComplexity": 0,
+        "totalDataComplexity": 1,
+        "totalSystemComplexity": 1,
+        "package": "App\\Controller\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 2,
+        "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1255,6 +1255,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 1,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1398,6 +1399,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 8,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1510,12 +1512,12 @@ var classes = [
         "number_operands": 105,
         "number_operators_unique": 5,
         "number_operands_unique": 37,
-        "cloc": 19,
-        "loc": 83,
+        "cloc": 16,
+        "loc": 80,
         "lloc": 64,
-        "mi": 73.96,
+        "mi": 72.14,
         "mIwoC": 40.2,
-        "commentWeight": 33.76,
+        "commentWeight": 31.94,
         "kanDefect": 0.29,
         "relativeStructuralComplexity": 289,
         "relativeDataComplexity": 0.53,
@@ -1528,6 +1530,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 5,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1672,6 +1675,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 4,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1769,6 +1773,102 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 2,
         "instability": 1,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Controller\\ApiGameController",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "gameStatus",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBooks",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBookByIsbn",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 4,
+        "nbMethods": 3,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 3,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 1,
+        "wmc": 5,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "App\\Card\\DeckOfCards",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "App\\Repository\\BookRepository",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "App\\Repository\\BookRepository",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse"
+        ],
+        "parents": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
+        ],
+        "implements": [],
+        "lcom": 3,
+        "length": 91,
+        "vocabulary": 30,
+        "volume": 446.53,
+        "difficulty": 4.17,
+        "effort": 1860.53,
+        "level": 0.24,
+        "bugs": 0.15,
+        "time": 103,
+        "intelligentContent": 107.17,
+        "number_operators": 16,
+        "number_operands": 75,
+        "number_operators_unique": 3,
+        "number_operands_unique": 27,
+        "cloc": 6,
+        "loc": 42,
+        "lloc": 36,
+        "mi": 74.73,
+        "mIwoC": 47.09,
+        "commentWeight": 27.63,
+        "kanDefect": 0.45,
+        "relativeStructuralComplexity": 121,
+        "relativeDataComplexity": 0.44,
+        "relativeSystemComplexity": 121.44,
+        "totalStructuralComplexity": 484,
+        "totalDataComplexity": 1.75,
+        "totalSystemComplexity": 485.75,
+        "package": "App\\Controller\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 5,
+        "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -1901,6 +2001,194 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 6,
         "instability": 1,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Controller\\ApiLibraryController",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "getBooks",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "getBookByIsbn",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 2,
+        "nbMethods": 2,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 2,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 0,
+        "wmc": 4,
+        "ccn": 3,
+        "ccnMethodMax": 2,
+        "externals": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "App\\Repository\\BookRepository",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "App\\Repository\\BookRepository",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse"
+        ],
+        "parents": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
+        ],
+        "implements": [],
+        "lcom": 2,
+        "length": 50,
+        "vocabulary": 18,
+        "volume": 208.5,
+        "difficulty": 4.1,
+        "effort": 854.83,
+        "level": 0.24,
+        "bugs": 0.07,
+        "time": 47,
+        "intelligentContent": 50.85,
+        "number_operators": 9,
+        "number_operands": 41,
+        "number_operators_unique": 3,
+        "number_operands_unique": 15,
+        "cloc": 2,
+        "loc": 24,
+        "lloc": 22,
+        "mi": 75.7,
+        "mIwoC": 54.07,
+        "commentWeight": 21.62,
+        "kanDefect": 0.45,
+        "relativeStructuralComplexity": 36,
+        "relativeDataComplexity": 0.64,
+        "relativeSystemComplexity": 36.64,
+        "totalStructuralComplexity": 72,
+        "totalDataComplexity": 1.29,
+        "totalSystemComplexity": 73.29,
+        "package": "App\\Controller\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 3,
+        "instability": 1,
+        "numberOfUnitTests": 0,
+        "violations": {}
+    },
+    {
+        "name": "App\\Controller\\ApiDeckController",
+        "interface": false,
+        "abstract": false,
+        "final": false,
+        "methods": [
+            {
+                "name": "__construct",
+                "role": "setter",
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "init",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "initCallback",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "drawOneCard",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            },
+            {
+                "name": "drawMoreCards",
+                "role": null,
+                "public": true,
+                "private": false,
+                "_type": "Hal\\Metric\\FunctionMetric"
+            }
+        ],
+        "nbMethodsIncludingGettersSetters": 5,
+        "nbMethods": 4,
+        "nbMethodsPrivate": 0,
+        "nbMethodsPublic": 4,
+        "nbMethodsGetter": 0,
+        "nbMethodsSetters": 1,
+        "wmc": 6,
+        "ccn": 3,
+        "ccnMethodMax": 3,
+        "externals": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController",
+            "App\\Card\\DeckOfCards",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "App\\Card\\DeckOfCards",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "App\\Card\\DeckOfCards",
+            "RuntimeException",
+            "RuntimeException",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse",
+            "Symfony\\Component\\HttpFoundation\\Session\\SessionInterface",
+            "Symfony\\Component\\HttpFoundation\\JsonResponse"
+        ],
+        "parents": [
+            "Symfony\\Bundle\\FrameworkBundle\\Controller\\AbstractController"
+        ],
+        "implements": [],
+        "lcom": 3,
+        "length": 111,
+        "vocabulary": 36,
+        "volume": 573.86,
+        "difficulty": 5.5,
+        "effort": 3156.24,
+        "level": 0.18,
+        "bugs": 0.19,
+        "time": 175,
+        "intelligentContent": 104.34,
+        "number_operators": 23,
+        "number_operands": 88,
+        "number_operators_unique": 4,
+        "number_operands_unique": 32,
+        "cloc": 6,
+        "loc": 57,
+        "lloc": 51,
+        "mi": 67.12,
+        "mIwoC": 43.03,
+        "commentWeight": 24.09,
+        "kanDefect": 0.29,
+        "relativeStructuralComplexity": 81,
+        "relativeDataComplexity": 0.52,
+        "relativeSystemComplexity": 81.52,
+        "totalStructuralComplexity": 405,
+        "totalDataComplexity": 2.6,
+        "totalSystemComplexity": 407.6,
+        "package": "App\\Controller\\",
+        "pageRank": 0.01,
+        "afferentCoupling": 0,
+        "efferentCoupling": 5,
+        "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -2017,9 +2305,10 @@ var classes = [
         "totalSystemComplexity": 54.67,
         "package": "App\\Card\\",
         "pageRank": 0.48,
-        "afferentCoupling": 7,
+        "afferentCoupling": 9,
         "efferentCoupling": 4,
-        "instability": 0.36,
+        "instability": 0.31,
+        "numberOfUnitTests": 8,
         "violations": {}
     },
     {
@@ -2097,6 +2386,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 0,
         "instability": 0,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -2161,6 +2451,7 @@ var classes = [
         "afferentCoupling": 0,
         "efferentCoupling": 1,
         "instability": 1,
+        "numberOfUnitTests": 0,
         "violations": {}
     },
     {
@@ -2242,6 +2533,7 @@ var classes = [
         "afferentCoupling": 1,
         "efferentCoupling": 1,
         "instability": 0.5,
+        "numberOfUnitTests": 2,
         "violations": {}
     }
 ]

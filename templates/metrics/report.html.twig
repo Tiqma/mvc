@@ -5,11 +5,14 @@
 {% block body %}
     <h1>Intro</h1>
     <p><a href="#kmom01">Introduktion</a></p>
-    <p><a href="#kmom02">Länk till Kmom02</a></p>
-    <p><a href="#kmom03">Länk till Kmom03</a></p>
-    <p><a href="#kmom04">Länk till Kmom04</a></p>
-    <p><a href="#kmom05">Länk till Kmom05</a></p>
-    <p><a href="#kmom06">Länk till Kmom06</a></p>
+    <p><a href="#kmom02">Codestyle</a></p>
+    <p><a href="#kmom03">Coverage</a></p>
+    <p><a href="#kmom04">Complexity</a></p>
+    <p><a href="#kmom05">Cohesion</a></p>
+    <p><a href="#kmom06">Coupling</a></p>
+    <p><a href="#phpmetrics">Phpmetrics</a></p>
+    <p><a href="#scrutinizer">Scrutinizer</a></p>
+    <p><a href="#improve">Förbättringar</a></p>
     <article class="article">
 
     <header>
@@ -19,49 +22,145 @@
     <section id="kmom01">
     {% apply markdown_to_html %}
     # Codestyle
-    
-    
-    
+
+    Att koden innehåller ett mönster i hur den är skriven.
 
     {% endapply %}
     </section>
 
     <section id="kmom02">
     {% apply markdown_to_html %}
-    # Kmom02
+    # Coverage
+
+    Visar hur stor del av koden som täcks av tester. Hög täckning indikerar bra testning.
 
     {% endapply %}
     </section>
 
     <section id="kmom03">
     {% apply markdown_to_html %}
-    # Kmom03
+    # Complexity
+
+    Högre värde innebär mer komplex kod, vilket kan vara svårare att underhålla.
 
     {% endapply %}
     </section>
 
     <section id="kmom04">
     {% apply markdown_to_html %}
-    # Kmom04
+    # Cohesion
+
+    Mäter hur väl metoder i en klass hänger ihop. Hög kohesion 
+    (lägre värden) innebär fokuserade klasser med enskilda ansvarsområden.
 
     {% endapply %}
     </section>
 
     <section id="kmom05">
     {% apply markdown_to_html %}
-    # Kmom05
+    # Coupling
+
+    Mäter beroenden mellan klasser. Hög koppling kan komplicera underhåll.
     
 
     {% endapply %}
     </section>
 
-    <section id="kmom06"> <!-- Lägg till id-attributet -->
+    <section id="kmom06"> 
     {% apply markdown_to_html %}
-    # Kmom06
+    # CRAP
     
-    Markdown-innehåll för Kmom06.
+    Kombinerar komplexitet och testtäckning för att bedöma underhållsrisk.
+    Fler tester minskar CRAP-poängen för komplexa metoder.
+
     {% endapply %}
     </section>
+
+    <section id="phpmetrics"> 
+    {% apply markdown_to_html %}
+    # Phpmetrics
+    
+    <img src="{{ asset('build/images/start.PNG') }}" alt="" class="metric">
+
+    Så här ser min overview ut i phpmetrics. De tre stora röda cirklarna är LibraryController,
+    LuckyControllerJson och Winner.
+
+    <img src="{{ asset('build/images/cohesion.PNG') }}" alt="" class="metric">
+
+    Den klassen som fall dit för dålig cohesion är LuckyControllerJson vilket är förståligt då jag
+    allt i den är för min api sida där inget hänger ihop. Vilket går hand i hand i dess namn, då det 
+    kanske borde heta ApiController.
+
+    För att fixa det här borde jag dela upp koden i olika controllers.
+
+    <img src="{{ asset('build/images/complexity.PNG') }}" alt="" class="metric">
+
+    Om vi kollar på complexity så föll min klass "game/player" dit trots att det är en ganska liten klass.
+    Tror det phpmetrics klagar på är dess funktion getTotalPoints() som har if och elseif satser för olika 
+    poäng + ett specialfall från att räkna poäng från ess.
+
+    För att fixa detta borde jag dela upp funktionen och dess ansvar till nya funktioner.
+
+    <img src="{{ asset('build/images/coupling.PNG') }}" alt="" class="metric">
+
+    När det kommer till coupling så hade min klass "Card/DeckOfCards" högst värde. Det kan bero på att min
+    kortlek kod grundades för mycket i den klassen och det blev inte tillräckligt många andra klasser som
+    fick olika ansvarsområden. Det gör att mina controllers använder DeckOfCards alldeles för mycket.
+
+    Jag borde fixa detta genom att ge andra klasser mer ansvarsområden och inte låta göra DeckOfCards göra
+    så mycket.
+
+    {% endapply %}
+    </section>
+
+
+    <section id="scrutinizer">
+    {% apply markdown_to_html %}
+    # Scrutinizer
+
+    [![Build Status](https://scrutinizer-ci.com/g/Tiqma/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Tiqma/mvc/build-status/main)
+    [![Code Coverage](https://scrutinizer-ci.com/g/Tiqma/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Tiqma/mvc/?branch=main)
+    [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Tiqma/mvc/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Tiqma/mvc/?branch=main)
+
+    <img src="{{ asset('build/images/codestyle.PNG') }}" alt="" class="metric">
+
+    För min codestyle klagar scrutinizer på att jag inte har deklarerat deckOfCardsService i min klass
+    LuckyControllerJson.
+
+    För att fixa det borde jag helt enkelt deklarera den.
+
+    <img src="{{ asset('build/images/crap.PNG') }}" alt="" class="metric">
+
+    teestDiceHand() får en hög crap score då den bara innehåller ett test av en ganska mycket större klass.
+
+    För att fixa detta borde jag göra fler tester för klassen.
+
+    <img src="{{ asset('build/images/coverage.PNG') }}" alt="" class="metric">
+
+    Coverage är ganska rakt på sak. Jag har helt enkelt inte gjort tester för de som har 0% coverage eller
+    låg %.
+
+    För att fixa detta borde jag skriva fler tester för klasserna.
+
+    {% endapply %}
+    </section>
+
+    <section id="improve">
+    {% apply markdown_to_html %}
+    # Förbättringar
+
+    Jag börjar med att förbättra min kodtäckningen där jag fokuserar på på att lägga till tester för min
+    Dice klass. Jag hoppas med det att CRAP scoren för DiceGameController::testDiceHand() kommer att minska.
+    
+    Efter det ska jag se om jag kan få ner complexity för min game/player klass. Jag väljer den klassen för att den
+    fick ett högt complexity värde från phpmetrics. Jag kommer behöva skriva om funktionen i mindre funktioner.
+
+    Till sist ska jag se om jag kan fixa till mina api controllers för att få ett bättre cohesion score. Det gör 
+    jag genom att inte lägga alla api routes i en klass utan dela upp det i flera controllers.
+
+    {% endapply %}
+    </section>
+
 
     </article>
 
@@ -69,7 +168,6 @@
     <h2>Kmom07-10</h2>
     <p>Här är redovisningstexten</p>
     </section>
-
 
     </article>
 

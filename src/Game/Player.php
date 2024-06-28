@@ -38,19 +38,28 @@ class Player
 
         foreach ($this->hand as $card) {
             $rank = substr($card, 3);
-            if ($rank == 'A') {
-                $totalPoints += 14;
-                if ($totalPoints > 21) {
-                    $totalPoints -= 13;
-                }
-            } elseif (is_numeric($rank)) {
-                $totalPoints += (int)$rank;
-            } elseif ($rank == 'J') {
-                $totalPoints += 11;
-            } elseif ($rank == 'Q') {
-                $totalPoints += 12;
-            } elseif ($rank == 'K') {
-                $totalPoints += 13;
+
+            switch ($rank) {
+                case 'A':
+                    $totalPoints += 14;
+                    if ($totalPoints > 21) {
+                        $totalPoints -= 13;
+                    }
+                    break;
+                case 'J':
+                    $totalPoints += 11;
+                    break;
+                case 'Q':
+                    $totalPoints += 12;
+                    break;
+                case 'K':
+                    $totalPoints += 13;
+                    break;
+                default:
+                    if (is_numeric($rank)) {
+                        $totalPoints += (int)$rank;
+                    }
+                    break;
             }
         }
 

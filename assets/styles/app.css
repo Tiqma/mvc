@@ -3,6 +3,7 @@
 @import "kmom02.css";
 @import "kmom05.css";
 @import "card.css";
+@import "metric.css";
 * {
     font-family: 'Open Sans', sans-serif;
 }
@@ -61,4 +62,8 @@ body {
 
 .hidden {
     display: none;
+}
+
+.article {
+    max-width: 1200px;
 }
