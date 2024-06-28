@@ -146,6 +146,96 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Card-DeckOfCards.html#property_deck"
         },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController",
+            "name": "ApiDeckController",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController\u003A\u003Ainit\u0028\u0029",
+            "name": "init",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html#method_init"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController\u003A\u003AinitCallback\u0028\u0029",
+            "name": "initCallback",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html#method_initCallback"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController\u003A\u003AdrawOneCard\u0028\u0029",
+            "name": "drawOneCard",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html#method_drawOneCard"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController\u003A\u003AdrawMoreCards\u0028\u0029",
+            "name": "drawMoreCards",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html#method_drawMoreCards"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiDeckController\u003A\u003A\u0024deckOfCardsService",
+            "name": "deckOfCardsService",
+            "summary": "",
+            "url": "classes/App-Controller-ApiDeckController.html#property_deckOfCardsService"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiGameController",
+            "name": "ApiGameController",
+            "summary": "",
+            "url": "classes/App-Controller-ApiGameController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiGameController\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Controller-ApiGameController.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiGameController\u003A\u003AgameStatus\u0028\u0029",
+            "name": "gameStatus",
+            "summary": "",
+            "url": "classes/App-Controller-ApiGameController.html#method_gameStatus"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiGameController\u003A\u003AgetBooks\u0028\u0029",
+            "name": "getBooks",
+            "summary": "",
+            "url": "classes/App-Controller-ApiGameController.html#method_getBooks"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiGameController\u003A\u003AgetBookByIsbn\u0028\u0029",
+            "name": "getBookByIsbn",
+            "summary": "",
+            "url": "classes/App-Controller-ApiGameController.html#method_getBookByIsbn"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiGameController\u003A\u003A\u0024deckOfCardsService",
+            "name": "deckOfCardsService",
+            "summary": "",
+            "url": "classes/App-Controller-ApiGameController.html#property_deckOfCardsService"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiLibraryController",
+            "name": "ApiLibraryController",
+            "summary": "",
+            "url": "classes/App-Controller-ApiLibraryController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiLibraryController\u003A\u003AgetBooks\u0028\u0029",
+            "name": "getBooks",
+            "summary": "",
+            "url": "classes/App-Controller-ApiLibraryController.html#method_getBooks"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiLibraryController\u003A\u003AgetBookByIsbn\u0028\u0029",
+            "name": "getBookByIsbn",
+            "summary": "",
+            "url": "classes/App-Controller-ApiLibraryController.html#method_getBookByIsbn"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiQuoteController",
+            "name": "ApiQuoteController",
+            "summary": "",
+            "url": "classes/App-Controller-ApiQuoteController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiQuoteController\u003A\u003AgetQuote\u0028\u0029",
+            "name": "getQuote",
+            "summary": "",
+            "url": "classes/App-Controller-ApiQuoteController.html#method_getQuote"
+        },                {
             "fqsen": "\\App\\Controller\\CardController",
             "name": "CardController",
             "summary": "",
@@ -381,46 +471,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-LuckyControllerJson.html#method_apiLandingPage"
         },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AgetQuote\u0028\u0029",
-            "name": "getQuote",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_getQuote"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003Ainit\u0028\u0029",
-            "name": "init",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_init"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AinitCallback\u0028\u0029",
-            "name": "initCallback",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_initCallback"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AdrawOneCard\u0028\u0029",
-            "name": "drawOneCard",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_drawOneCard"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AdrawMoreCards\u0028\u0029",
-            "name": "drawMoreCards",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_drawMoreCards"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AgameStatus\u0028\u0029",
-            "name": "gameStatus",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_gameStatus"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AgetBooks\u0028\u0029",
-            "name": "getBooks",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_getBooks"
-        },                {
-            "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003AgetBookByIsbn\u0028\u0029",
-            "name": "getBookByIsbn",
-            "summary": "",
-            "url": "classes/App-Controller-LuckyControllerJson.html#method_getBookByIsbn"
-        },                {
             "fqsen": "\\App\\Controller\\LuckyControllerJson\u003A\u003A\u0024deckOfCardsService",
             "name": "deckOfCardsService",
             "summary": "",
@@ -455,6 +505,16 @@ Search.appendIndex(
             "name": "report",
             "summary": "",
             "url": "classes/App-Controller-LuckyControllerTwig.html#method_report"
+        },                {
+            "fqsen": "\\App\\Controller\\MetricsController",
+            "name": "MetricsController",
+            "summary": "",
+            "url": "classes/App-Controller-MetricsController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\MetricsController\u003A\u003Ametrics\u0028\u0029",
+            "name": "metrics",
+            "summary": "",
+            "url": "classes/App-Controller-MetricsController.html#method_metrics"
         },                {
             "fqsen": "\\App\\Controller\\ProductController",
             "name": "ProductController",

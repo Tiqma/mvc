@@ -1,4 +1,8 @@
 
+[![Build Status](https://scrutinizer-ci.com/g/Tiqma/mvc/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Tiqma/mvc/build-status/main)
+[![Code Coverage](https://scrutinizer-ci.com/g/Tiqma/mvc/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Tiqma/mvc/?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Tiqma/mvc/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Tiqma/mvc/?branch=main)
+
 ![Symfony image](.img/databas.jpg)
 
 Hur man klonar detta symfony projekt

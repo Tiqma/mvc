@@ -70,4 +70,3 @@ class DiceTest extends TestCase
         $this->assertMatchesRegularExpression('/\[\d\]/', $res);
     }
 }
-

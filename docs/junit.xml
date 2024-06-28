@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="30" assertions="66" errors="0" warnings="0" failures="0" skipped="0" time="0.028452">
-    <testsuite name="Project Test Suite" tests="30" assertions="66" errors="0" warnings="0" failures="0" skipped="0" time="0.028452">
-      <testsuite name="App\Card\CardHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.008201">
-        <testcase name="testClearHand" class="App\Card\CardHandTest" classname="App.Card.CardHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="15" assertions="2" time="0.007057"/>
-        <testcase name="testAddCards" class="App\Card\CardHandTest" classname="App.Card.CardHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="27" assertions="3" time="0.001144"/>
+  <testsuite name="" tests="30" assertions="66" errors="0" warnings="0" failures="0" skipped="0" time="0.026779">
+    <testsuite name="Project Test Suite" tests="30" assertions="66" errors="0" warnings="0" failures="0" skipped="0" time="0.026779">
+      <testsuite name="App\Card\CardHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.007601">
+        <testcase name="testClearHand" class="App\Card\CardHandTest" classname="App.Card.CardHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="15" assertions="2" time="0.006864"/>
+        <testcase name="testAddCards" class="App\Card\CardHandTest" classname="App.Card.CardHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/CardHandTest.php" line="27" assertions="3" time="0.000737"/>
       </testsuite>
-      <testsuite name="App\Card\DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" tests="7" assertions="13" errors="0" warnings="0" failures="0" skipped="0" time="0.008226">
-        <testcase name="testCreateDeckOfCards" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="16" assertions="2" time="0.000861"/>
-        <testcase name="testGetDeck" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="26" assertions="1" time="0.000311"/>
-        <testcase name="testDrawCard" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="35" assertions="2" time="0.001684"/>
-        <testcase name="testDrawCardException" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="47" assertions="1" time="0.001386"/>
-        <testcase name="testDrawCards" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="60" assertions="3" time="0.000362"/>
-        <testcase name="testShuffleDeck" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="73" assertions="2" time="0.003299"/>
-        <testcase name="testCountCards" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="86" assertions="2" time="0.000323"/>
+      <testsuite name="App\Card\DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" tests="7" assertions="13" errors="0" warnings="0" failures="0" skipped="0" time="0.007456">
+        <testcase name="testCreateDeckOfCards" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="16" assertions="2" time="0.000721"/>
+        <testcase name="testGetDeck" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="26" assertions="1" time="0.000319"/>
+        <testcase name="testDrawCard" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="35" assertions="2" time="0.001611"/>
+        <testcase name="testDrawCardException" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="47" assertions="1" time="0.001230"/>
+        <testcase name="testDrawCards" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="60" assertions="3" time="0.000354"/>
+        <testcase name="testShuffleDeck" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="73" assertions="2" time="0.002913"/>
+        <testcase name="testCountCards" class="App\Card\DeckOfCardsTest" classname="App.Card.DeckOfCardsTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Card/DeckOfCardsTest.php" line="86" assertions="2" time="0.000307"/>
       </testsuite>
-      <testsuite name="App\Dice\DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" tests="4" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.004073">
-        <testcase name="testAddDice" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="16" assertions="1" time="0.000913"/>
-        <testcase name="testRollDice" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="31" assertions="9" time="0.001780"/>
-        <testcase name="testGetValuesEmptyHand" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="54" assertions="1" time="0.000301"/>
-        <testcase name="testGetString" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="65" assertions="7" time="0.001079"/>
+      <testsuite name="App\Dice\DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" tests="4" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.003890">
+        <testcase name="testAddDice" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="16" assertions="1" time="0.000856"/>
+        <testcase name="testRollDice" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="31" assertions="9" time="0.001705"/>
+        <testcase name="testGetValuesEmptyHand" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="54" assertions="1" time="0.000272"/>
+        <testcase name="testGetString" class="App\Dice\DiceHandTest" classname="App.Dice.DiceHandTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceHandTest.php" line="65" assertions="7" time="0.001056"/>
       </testsuite>
-      <testsuite name="App\Dice\DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" tests="5" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.002212">
-        <testcase name="testCreateDice" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="16" assertions="1" time="0.000283"/>
-        <testcase name="testRollDice" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="25" assertions="4" time="0.000488"/>
-        <testcase name="testGetValueAfterRoll" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="37" assertions="4" time="0.000401"/>
-        <testcase name="testGetValueBeforeRoll" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="50" assertions="2" time="0.000739"/>
-        <testcase name="testGetAsString" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="62" assertions="3" time="0.000301"/>
+      <testsuite name="App\Dice\DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" tests="5" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.002182">
+        <testcase name="testCreateDice" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="16" assertions="1" time="0.000316"/>
+        <testcase name="testRollDice" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="25" assertions="4" time="0.000461"/>
+        <testcase name="testGetValueAfterRoll" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="37" assertions="4" time="0.000409"/>
+        <testcase name="testGetValueBeforeRoll" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="50" assertions="2" time="0.000700"/>
+        <testcase name="testGetAsString" class="App\Dice\DiceTest" classname="App.Dice.DiceTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Dice/DiceTest.php" line="62" assertions="3" time="0.000297"/>
       </testsuite>
-      <testsuite name="App\Game\BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" tests="4" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.002712">
-        <testcase name="testShouldStopBelow17" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="16" assertions="1" time="0.001258"/>
-        <testcase name="testShouldStopAt17" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="27" assertions="1" time="0.000678"/>
-        <testcase name="testShouldStopAbove17" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="38" assertions="1" time="0.000294"/>
-        <testcase name="testPlayBankerTurn" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="49" assertions="4" time="0.000481"/>
+      <testsuite name="App\Game\BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" tests="4" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.002838">
+        <testcase name="testShouldStopBelow17" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="16" assertions="1" time="0.001461"/>
+        <testcase name="testShouldStopAt17" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="27" assertions="1" time="0.000643"/>
+        <testcase name="testShouldStopAbove17" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="38" assertions="1" time="0.000309"/>
+        <testcase name="testPlayBankerTurn" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="49" assertions="4" time="0.000425"/>
       </testsuite>
-      <testsuite name="App\Game\PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.001039">
-        <testcase name="testClearHand" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="15" assertions="2" time="0.000311"/>
-        <testcase name="testHasBusted" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="29" assertions="1" time="0.000373"/>
-        <testcase name="testHasNotBusted" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="41" assertions="1" time="0.000356"/>
+      <testsuite name="App\Game\PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" tests="3" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.000974">
+        <testcase name="testClearHand" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="15" assertions="2" time="0.000316"/>
+        <testcase name="testHasBusted" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="29" assertions="1" time="0.000332"/>
+        <testcase name="testHasNotBusted" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="41" assertions="1" time="0.000326"/>
       </testsuite>
-      <testsuite name="App\Game\WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.001989">
-        <testcase name="testDeterminePlayerBusted" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="17" assertions="1" time="0.000623"/>
-        <testcase name="testDetermineBankerBusted" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="33" assertions="1" time="0.000332"/>
-        <testcase name="testDeterminePlayerWins" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="49" assertions="1" time="0.000325"/>
-        <testcase name="testDetermineBankerWins" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="68" assertions="1" time="0.000376"/>
-        <testcase name="testDetermineTieGoesToBanker" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="87" assertions="1" time="0.000333"/>
+      <testsuite name="App\Game\WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" tests="5" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.001839">
+        <testcase name="testDeterminePlayerBusted" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="17" assertions="1" time="0.000567"/>
+        <testcase name="testDetermineBankerBusted" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="33" assertions="1" time="0.000317"/>
+        <testcase name="testDeterminePlayerWins" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="49" assertions="1" time="0.000320"/>
+        <testcase name="testDetermineBankerWins" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="68" assertions="1" time="0.000325"/>
+        <testcase name="testDetermineTieGoesToBanker" class="App\Game\WinnerTest" classname="App.Game.WinnerTest" file="/home/tiqma/dbwebb-kurser/mvc/me/report/tests/Game/WinnerTest.php" line="87" assertions="1" time="0.000310"/>
       </testsuite>
     </testsuite>
   </testsuite>

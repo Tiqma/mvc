@@ -15,9 +15,7 @@
     <p><a href="#improve">Förbättringar</a></p>
     <article class="article">
 
-    <header>
     <h1>Introduktion</h1>
-    </header>
 
     <section id="kmom01">
     {% apply markdown_to_html %}
@@ -162,11 +160,44 @@
     </section>
 
 
-    </article>
+    <section id="result">
+    {% apply markdown_to_html %}
+    # Resultat av förbättringar
 
-    <section>
-    <h2>Kmom07-10</h2>
-    <p>Här är redovisningstexten</p>
+    <img src="{{ asset('build/images/NyCrap.PNG') }}" alt="" class="metric">
+
+    Förväntat med fler tester så har CRAP scoren minskat.
+
+    <img src="{{ asset('build/images/NyAllt.PNG') }}" alt="" class="metric">
+
+    <img src="{{ asset('build/images/NyCohesion.PNG') }}" alt="" class="metric">
+
+    I och med att jag introducerade fler controllers för api routes så minskade cohesion problemen.
+    Fick även bort 4 issues i och med det från scrutinizer.
+
+    <img src="{{ asset('build/images/NyComplexity.PNG') }}" alt="" class="metric">
+
+    Jag lyckades få ner complexity scoren, men inte så mycket i player klassen som jag hade hoppats.
+
+    {% endapply %}
+    </section>
+
+
+    <section id="result">
+    {% apply markdown_to_html %}
+    # Diskussion
+
+    Man kan absolut jobba aktivt med kodkvaliteten och "clean code" med detta då man får en bra förklaring
+    från Phpmetrics eller scrutinizer var problem uppstår. Scrutinizer fungerar exemplariskt med att uppdatera
+    problem eller förbättringar genom github. Man får vara lite mer aktiv själv med phpmetrics.
+
+    Fördelar är att man får en översikt utifall man jobbar flera på ett projekt hur koden ska se ut. Nackdelar 
+    kan vara att man får tunnelseende med koden och man får inte tänka så mycket utanför ramen.
+
+    Jag ser nu andra möjligheter har uppkommit för att jobba mot "clean code". Man får andra möjligheter att se
+    hur koden ska se ut än att bara använda linters.
+
+    {% endapply %}
     </section>
 
     </article>

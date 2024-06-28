@@ -18,10 +18,10 @@ class DiceHandTest extends TestCase
         $hand = new DiceHand();
         $die1 = new Dice();
         $die2 = new Dice();
-        
+
         $hand->add($die1);
         $hand->add($die2);
-        
+
         $this->assertEquals(2, $hand->getNumberDices());
     }
 
@@ -33,14 +33,14 @@ class DiceHandTest extends TestCase
         $hand = new DiceHand();
         $die1 = new Dice();
         $die2 = new Dice();
-        
+
         $hand->add($die1);
         $hand->add($die2);
-        
+
         $hand->roll();
-        
+
         $values = $hand->getValues();
-        
+
         $this->assertCount(2, $values);
         $this->assertGreaterThanOrEqual(1, $values[0]);
         $this->assertLessThanOrEqual(6, $values[0]);
@@ -55,7 +55,7 @@ class DiceHandTest extends TestCase
     {
         $hand = new DiceHand();
         $values = $hand->getValues();
-        
+
         $this->assertEmpty($values);
     }
 
@@ -67,14 +67,14 @@ class DiceHandTest extends TestCase
         $hand = new DiceHand();
         $die1 = new Dice();
         $die2 = new Dice();
-        
+
         $hand->add($die1);
         $hand->add($die2);
-        
+
         $hand->roll();
-        
+
         $strings = $hand->getString();
-        
+
         $this->assertCount(2, $strings);
         $this->assertStringStartsWith('[', $strings[0]);
         $this->assertStringEndsWith(']', $strings[0]);
