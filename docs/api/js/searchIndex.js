@@ -1,6 +1,76 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\App\\Adventure\\Adventure",
+            "name": "Adventure",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AloadWorld\u0028\u0029",
+            "name": "loadWorld",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_loadWorld"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AdescribeCurrentRoom\u0028\u0029",
+            "name": "describeCurrentRoom",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_describeCurrentRoom"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AgetCurrentRoomImage\u0028\u0029",
+            "name": "getCurrentRoomImage",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_getCurrentRoomImage"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003ApickUpItem\u0028\u0029",
+            "name": "pickUpItem",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_pickUpItem"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AmoveToRoom\u0028\u0029",
+            "name": "moveToRoom",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_moveToRoom"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AthrowItem\u0028\u0029",
+            "name": "throwItem",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_throwItem"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AgetInventory\u0028\u0029",
+            "name": "getInventory",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_getInventory"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AgetConnectedRooms\u0028\u0029",
+            "name": "getConnectedRooms",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_getConnectedRooms"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003AgetCurrentRoomItems\u0028\u0029",
+            "name": "getCurrentRoomItems",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#method_getCurrentRoomItems"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003A\u0024rooms",
+            "name": "rooms",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#property_rooms"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003A\u0024inventory",
+            "name": "inventory",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#property_inventory"
+        },                {
+            "fqsen": "\\App\\Adventure\\Adventure\u003A\u003A\u0024currentRoom",
+            "name": "currentRoom",
+            "summary": "",
+            "url": "classes/App-Adventure-Adventure.html#property_currentRoom"
+        },                {
             "fqsen": "\\App\\Card\\Card",
             "name": "Card",
             "summary": "",
@@ -145,6 +215,36 @@ Search.appendIndex(
             "name": "deck",
             "summary": "",
             "url": "classes/App-Card-DeckOfCards.html#property_deck"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController",
+            "name": "AdventureController",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003AmoveRoom\u0028\u0029",
+            "name": "moveRoom",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_moveRoom"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003ApickUpItem\u0028\u0029",
+            "name": "pickUpItem",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_pickUpItem"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003AthrowItem\u0028\u0029",
+            "name": "throwItem",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_throwItem"
+        },                {
+            "fqsen": "\\App\\Controller\\AdventureController\u003A\u003Ainit\u0028\u0029",
+            "name": "init",
+            "summary": "",
+            "url": "classes/App-Controller-AdventureController.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\ApiDeckController",
             "name": "ApiDeckController",
@@ -870,6 +970,11 @@ Search.appendIndex(
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
+        },                {
+            "fqsen": "\\App\\Adventure",
+            "name": "Adventure",
+            "summary": "",
+            "url": "namespaces/app-adventure.html"
         },                {
             "fqsen": "\\App\\Card",
             "name": "Card",

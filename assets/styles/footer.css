@@ -6,8 +6,8 @@ padding: 20px;
 
 .footContainer {
 display: grid;
-grid-template-columns: repeat(3, 1fr); /* Tre kolumner */
-grid-gap: 10px; /* Avstånd mellan elementen */
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
 }
 
 .footer-column {

@@ -1,0 +1,43 @@
+{% extends 'baseProj.html.twig' %}
+
+{% block title %}Proj{% endblock %}
+
+{% block body %}
+    <h1>Äventyrsspel</h1>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-warning">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div>
+        <p>{{ description }}</p>
+        <img src="{{ asset('build/images/' ~ image) }}" alt="Nuvarande rum" class="room">
+    </div>
+
+    <div>
+        <h2>Vad vill du göra?</h2>
+        <ul>
+            {% for room, details in connectedRooms %}
+                <li><a href="{{ path('move_room', {'room': room}) }}">Gå till {{ details.name }}</a></li>
+            {% endfor %}
+            {% for item in currentRoomItems %}
+                <li><a href="{{ path('pickup_item', {'item': item}) }}">Plocka upp {{ item }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <h2>Din inventering</h2>
+        <ul>
+            {% for item in inventory %}
+                <li>{{ item }}
+                    <a href="{{ path('throw_item', {'item': item}) }}">Kasta</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

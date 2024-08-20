@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/glider.svg') }}">        {% block stylesheets %}
+            {{ encore_entry_link_tags('appProj') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('appProj') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="site-header" style="background-image: url({{ asset('img/ad.jpeg') }})">
+            <span class="site-title">MVC</span>
+        </header>
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ path('project') }}">Project</a></li>
+                <li><a href="{{ path('proj_about') }}">About</a></li>
+                <li><a href="{{ path('session_delete') }}">Delete Session</a></li>
+
+            </ul>
+        </nav>
+
+        {% block body %}{% endblock %}
+        </main>
+        <footer>
+            <div class="footContainerProj">
+            <div class="footer-column">
+                <h2>Äventyret</h2>
+                <p>Adventure INC.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Will you make it?</h2>
+                <p>Help: 000-000-000</p>
+                <p>E-post: Help@adventure.com</p>
+            </div>
+            <div class="footer-column">
+                <h2>Dots:</h2>
+                <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>

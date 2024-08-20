@@ -1,0 +1,126 @@
+@import "magic.css";
+@import "kmom02.css";
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1400px;
+    background-color: #2b2b2b;
+    color: #00ff00;
+    background-size: cover;
+}
+
+header {
+    height: 200px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00ff00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    border-bottom: 4px double #00ff00;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.databas {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+}
+
+.nav {
+    background: linear-gradient(to bottom, #1a1a1a, #2b2b2b);
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #00ff00;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-right: 2em;
+}
+
+.nav a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.nav a:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.3);
+    color: #ff0000;
+}
+
+.hidden {
+    display: none;
+}
+
+.article {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #00ff00;
+    padding: 20px;
+    text-align: center;
+}
+
+.footContainerProj {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.footer-column {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .footContainerProj {
+        grid-template-columns: 1fr;
+    }
+}
+
+.room {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff0000;
+}

@@ -1,0 +1,54 @@
+{
+    "rooms": {
+        "room_1": {
+            "description": "Du befinner dig i en skog och i fjärran står en skyskrapa. Du vet inte hur du hamnade här men allt som går genom din kropp just nu är en sak. Överlevnad.",
+            "items": [],
+            "image": "room_1.jpeg",
+            "connected_rooms": {
+                "room_2": {"name": "Skogsglänta"}
+            }
+        },
+        "room_2": {
+            "description": "Du står i en skogsglänta, omgiven av höga träd. Framför dig ligger en portfölj som verkar vara låst. En sten ligger på marken.",
+            "items": ["portfölj", "sten"],
+            "image": "room_2.jpeg",
+            "connected_rooms": {
+                "room_1": {"name": "Startpunkt"},
+                "room_3": {"name": "Byggnad"}
+            },
+            "locked_items": {
+                "portfölj": {
+                    "requires_item": "nyckel",
+                    "contains": "kort"
+                }
+            }
+        },
+        "room_3": {
+            "description": "Du står framför en skyskrapa och bryter nästan nacken för att lyckas se toppen av byggnaden.",
+            "items": [],
+            "image": "room_3.jpeg",
+            "connected_rooms": {
+                "room_2": {"name": "Skogsglänta"},
+                "room_4": {"name": "Lobby"}
+            }
+        },
+        "room_4": {
+            "description": "Du befinner dig innuti byggnadens lobby. På golvet ligger en nyckel.",
+            "items": ["nyckel"],
+            "image": "room_4.jpeg",
+            "connected_rooms": {
+                "room_3": {"name": "Byggnad"},
+                "room_5": {
+                    "name": "Toppen",
+                    "requires_item": "kort"
+                }
+            }
+        },
+        "room_5": {
+            "description": "Grattis! Du har lyckats ta dig till toppen! Nu är allt möjligt.",
+            "items": [],
+            "image": "room_5.jpeg",
+            "connected_rooms": {}
+        }
+    }
+}
