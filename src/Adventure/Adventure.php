@@ -49,7 +49,7 @@ class Adventure
 
     /**
      * @param string $item
-     * @return array{ success: bool, message: string }
+     * @return array
      */
     public function pickUpItem(string $item): array
     {
@@ -61,6 +61,7 @@ class Adventure
                 if ($item === 'portfölj') {
                     $this->inventory[] = $lock['contains'];
                     unset($this->rooms[$this->currentRoom]['locked_items'][$item]);
+                    return ['success' => true ];
                 }
             }
             return ['success' => false, 'message' => 'Du behöver ' .
@@ -70,31 +71,26 @@ class Adventure
         if (in_array($item, $room['items'])) {
             $this->inventory[] = $item;
             $this->rooms[$this->currentRoom]['items'] = array_diff($room['items'], [$item]);
-            return ['success' => true, 'message' => 'Du har plockat upp ' . $item . '.'];
+            return ['success' => true];
         }
     }
 
     /**
      * @param string $room
-     * @return array{ success: bool, message: string }
+     * @return array
      */
     public function moveToRoom(string $room): array
     {
-        if (!isset($this->rooms[$room])) {
-            return ['success' => false, 'message' => 'Det finns inget rum med namnet ' . $room . '.'];
-        }
-
         if (isset($this->rooms[$this->currentRoom]['connected_rooms'][$room]['requires_item'])) {
             $requiredItem = $this->rooms[$this->currentRoom]['connected_rooms'][$room]['requires_item'];
             if (in_array($requiredItem, $this->inventory)) {
                 $this->currentRoom = $room;
-                return ['success' => true, 'message' => 'Du har flyttat till rummet ' . $room . '.'];
             }
             return ['success' => false, 'message' => 'Du behöver ett ' . $requiredItem . ' för att gå in i rummet.'];
         }
 
         $this->currentRoom = $room;
-        return ['success' => true, 'message' => 'Du har flyttat till rummet ' . $room . '.'];
+        return ['success' => true];
     }
 
     /**
@@ -103,10 +99,6 @@ class Adventure
      */
     public function throwItem($item): array
     {
-        if (!in_array($item, $this->inventory)) {
-            return ['success' => false, 'message' => 'Du har inte ' . $item . ' i din inventering.'];
-        }
-
         if ($this->currentRoom === 'room_3' && $item === 'sten') {
             $this->inventory = array_diff($this->inventory, [$item]);
             return ['success' => true, 'message' => 'Du kastade stenen på byggnaden. Du hör hur stenen spräcker ett fönster i tusen bitar... Ganska onödigt...'];

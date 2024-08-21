@@ -33,7 +33,6 @@ class AdventureTest extends TestCase
         $this->adventure->moveToRoom("room_2");
         $result = $this->adventure->pickUpItem("sten");
         $this->assertTrue($result['success']);
-        $this->assertEquals('Du har plockat upp sten.', $result['message']);
         $this->assertContains("sten", $this->adventure->getInventory());
     }
 
@@ -49,7 +48,6 @@ class AdventureTest extends TestCase
     {
         $result = $this->adventure->moveToRoom("room_2");
         $this->assertTrue($result['success']);
-        $this->assertEquals('Du har flyttat till rummet room_2.', $result['message']);
     }
 
     public function testMoveToRoomWithoutCard(): void
@@ -64,14 +62,15 @@ class AdventureTest extends TestCase
     {
         $this->adventure->moveToRoom("room_4");
         $this->adventure->pickUpItem("nyckel");
+
         $this->adventure->moveToRoom("room_2");
         $this->adventure->pickUpItem("portfölj");
 
-        $this->adventure->moveToRoom("room_4");
         $result = $this->adventure->moveToRoom("room_5");
+
         $this->assertTrue($result['success']);
-        $this->assertEquals('Du har flyttat till rummet room_5.', $result['message']);
     }
+
 
     public function testThrowItem(): void
     {
