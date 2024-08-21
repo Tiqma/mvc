@@ -109,8 +109,7 @@ class Adventure
 
         if ($this->currentRoom === 'room_3' && $item === 'sten') {
             $this->inventory = array_diff($this->inventory, [$item]);
-            return ['success' => true, 'message' => 'Du kastade stenen på byggnaden. 
-                Du hör hur stenen spräcker ett fönster i tusen bitar... Ganska onödigt...'];
+            return ['success' => true, 'message' => 'Du kastade stenen på byggnaden. Du hör hur stenen spräcker ett fönster i tusen bitar... Ganska onödigt...'];
         }
 
         return ['success' => false, 'message' => 'Du kan inte kasta ' . $item . ' här.'];

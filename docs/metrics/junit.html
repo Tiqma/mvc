@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2024-08-19 14:56:16        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2024-08-21 12:56:50        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -60,24 +60,24 @@
         <div class="bloc bloc-number">
             <div class="label">Test suites</div>
             <div class="number">
-                7            </div>
+                8            </div>
         </div>
     </div>
     <div class="column">
         <div class="bloc bloc-number">
             <div class="label">Assertions</div>
             <div class="number">
-                66            </div>
+                85            </div>
         </div>
     </div>
     <div class="column">
         <div class="bloc bloc-number">
             <div class="label">
                 classes never called by tests
-                <small>(76.67 %)</small>
+                <small>(73.33 %)</small>
             </div>
             <div class="number">
-                23            </div>
+                22            </div>
         </div>
     </div>
 </div>
@@ -344,17 +344,6 @@
                                         0.19                                        </span>
                                     </td>
                                                             </tr>
-                                                        <tr>
-                                <td><span class="path">App\Adventure\Adventure</span></td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 1);">
-                                        12                                        </span>
-                                    </td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.38);">
-                                        0.38                                        </span>
-                                    </td>
-                                                            </tr>
                                                     </tbody>
                     </table>
                 </div>
@@ -389,6 +378,17 @@
                         </tr>
                         </thead>
                         <tbody id="contentAreaJunitCalled" class="clusterize-content">
+                                                    <tr>
+                                <td valign="top"><span class="path">App\Adventure\AdventureTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br>                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            12                                        </span>
+                                        <span class="path">App\Adventure\Adventure</span>
+                                                                    </td>
+                            </tr>
                                                     <tr>
                                 <td valign="top"><span class="path">App\Card\CardHandTest</span></td>
                                 <td style="padding-bottom: 1em;">
@@ -722,7 +722,7 @@
 
 
             
-            var json = {"name":"Execution time","children":[{"name":"App\\Card\\CardHandTest","time":0.008494},{"name":"App\\Card\\DeckOfCardsTest","time":0.008104},{"name":"App\\Dice\\DiceHandTest","time":0.00461},{"name":"App\\Dice\\DiceTest","time":0.002433},{"name":"App\\Game\\BankTest","time":0.002763},{"name":"App\\Game\\PlayerTest","time":0.000969},{"name":"App\\Game\\WinnerTest","time":0.002009}]};
+            var json = {"name":"Execution time","children":[{"name":"App\\Adventure\\AdventureTest","time":0.012787},{"name":"App\\Card\\CardHandTest","time":0.001928},{"name":"App\\Card\\DeckOfCardsTest","time":0.007704},{"name":"App\\Dice\\DiceHandTest","time":0.004377},{"name":"App\\Dice\\DiceTest","time":0.00241},{"name":"App\\Game\\BankTest","time":0.002487},{"name":"App\\Game\\PlayerTest","time":0.000984},{"name":"App\\Game\\WinnerTest","time":0.001883}]};
             root = json;
             var nodes = treemap.nodes(json)
                 .filter(function (d) {
